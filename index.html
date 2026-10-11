@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LibraConnect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+  <a href="#" class="logo" data-home><i class="fa-solid fa-book-open"></i><span>LibraConnect</span></a>
+  <form class="search" role="search" onsubmit="return false">
+    <input type="text" id="topSearch" placeholder="Search for books, authors, or subjects..." aria-label="Search">
+    <button type="submit" class="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </form>
+  <div class="top-actions">
+    <button class="bell" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="badge-dot"></span></button>
+    <button class="avatar" aria-label="Profile"><i class="fa-solid fa-user"></i></button>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <a href="#top" class="nav-item active" data-target="top"><i class="fa-solid fa-house"></i><span>Home</span></a>
+      <a href="#search" class="nav-item" data-target="search"><i class="fa-solid fa-magnifying-glass"></i><span>Search Books</span></a>
+      <a href="#featured" class="nav-item" data-target="featured"><i class="fa-solid fa-book-open-reader"></i><span>My Borrowed Books</span></a>
+      <a href="#recommended" class="nav-item" data-target="recommended"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Recommendations</span></a>
+      <a href="#quick" class="nav-item" data-target="quick"><i class="fa-solid fa-circle-info"></i><span>Library Info</span></a>
+    </nav>
+  </aside>
+
+  <main class="main" id="top">
+    <section class="hero" id="search">
+      <div class="hero-content">
+        <h1>Explore Thousands of Books</h1>
+        <p>Find what you need, when you need it.</p>
+        <form class="search hero-search" role="search" onsubmit="return false">
+          <input type="text" id="heroSearch" placeholder="Search for books, authors, or subjects..." aria-label="Search books">
+          <button type="submit" class="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <p class="search-msg" id="searchMsg" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <div class="content-row">
+      <section class="featured" id="featured">
+        <div class="section-head">
+          <h2>Featured Books</h2>
+          <a href="#" class="link">View All</a>
+        </div>
+        <div class="book-grid">
+          <article class="book-card">
+            <div class="cover c1"><small>James Clear</small><strong>Atomic Habits</strong><img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg" alt="Atomic Habits book cover" loading="lazy" onerror="this.remove()"></div>
+            <h3>Atomic Habits</h3><p>James Clear</p>
+            <span class="status ok">Available</span>
+          </article>
+          <article class="book-card">
+            <div class="cover c2"><strong>Clean Code</strong><small>Robert C. Martin</small><img src="https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg" alt="Clean Code book cover" loading="lazy" onerror="this.remove()"></div>
+            <h3>Clean Code</h3><p>Robert C. Martin</p>
+            <span class="status ok">Available</span>
+          </article>
+          <article class="book-card">
+            <div class="cover c3"><strong>The Psychology of Money</strong><small>Morgan Housel</small><img src="https://covers.openlibrary.org/b/isbn/9780857197689-L.jpg" alt="The Psychology of Money book cover" loading="lazy" onerror="this.remove()"></div>
+            <h3>The Psychology of Money</h3><p>Morgan Housel</p>
+            <span class="status warn">Limited Copies</span>
+          </article>
+          <article class="book-card">
+            <div class="cover c4"><strong>Deep Work</strong><small>Cal Newport</small><img src="https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg" alt="Deep Work book cover" loading="lazy" onerror="this.remove()"></div>
+            <h3>Deep Work</h3><p>Cal Newport</p>
+            <span class="status ok">Available</span>
+          </article>
+        </div>
+      </section>
+
+      <aside class="quick" id="quick">
+        <ul>
+          <li><a href="#" class="quick-item"><span class="qi star"><i class="fa-solid fa-star"></i></span>Top Rated Books</a></li>
+          <li><a href="#" class="quick-item"><span class="qi teal"><i class="fa-regular fa-calendar-check"></i></span>New Arrivals</a></li>
+          <li><a href="#" class="quick-item"><span class="qi blue"><i class="fa-solid fa-bullseye"></i></span>Recommended for You</a></li>
+          <li><a href="#" class="quick-item"><span class="qi purple"><i class="fa-regular fa-calendar-days"></i></span>Library Events</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <a href="#" class="reco" id="recommended">
+      <span class="reco-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      <span class="reco-text"><strong>Recommended For You</strong><small>Personalized picks based on your reading history</small></span>
+      <i class="fa-solid fa-chevron-right chev"></i>
+    </a>
+  </main>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<script src="script.js"></script>
+</body>
+</html>
